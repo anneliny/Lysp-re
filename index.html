@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <div id="divBackground"></div>
+    </div>
+    <div class="btnContent">
+        <button id="changeColor" onclick="btn1;btn2()">Av</button>
+    </div>
+    <script>
+        changeColor.addEventListener('click', btn1, btn2);
+
+        function btn1() {
+            let color = divBackground.style.backgroundColor;
+            if (color === 'yellow' || color === 'yellow') {
+                divBackground.style.backgroundColor = 'gray';
+            }
+            else if (color === 'gray') {
+                divBackground.style.backgroundColor = 'yellow';
+            }
+            else {
+                divBackground.style.backgroundColor = 'yellow';
+            }
+        }
+        function btn2() {
+            let btn = document.getElementById('changeColor');
+            if (btn.innerText == "På") {
+                btn.innerText = "Av";
+            }
+            else {
+                btn.innerText = "På";
+            }
+        }
+
+
+
+    </script>
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            margin-top: 150px;
+        }
+
+        .btnContent {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            border-radius: 10%;
+            background-color: rgb(255, 255, 255);
+            font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
+        }
+
+        #divBackground {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: gray;
+            margin-bottom: 20px;
+            border-style: groove;
+
+
+        }
+
+        .content {
+            display: grid;
+            justify-content: center;
+        }
+    </style>
+</body>
+
+</html>
